@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [active, setActive] = useState("home"); // track active section
 
   const links = [
     { name: "Home", href: "#hero" },
@@ -10,6 +11,25 @@ export default function Navbar() {
     { name: "About", href: "#about" },
     { name: "Contact", href: "#contact" },
   ];
+
+  // Observe sections on scroll
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.6 } // section must be 60% visible to count
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => sections.forEach((section) => observer.unobserve(section));
+  }, []);
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
@@ -25,7 +45,11 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className="text-gray-700 hover:text-blue-600 transition"
+              className={`transition ${
+                active === link.href.substring(1)
+                  ? "text-blue-600 font-semibold"
+                  : "text-gray-700 hover:text-blue-600"
+              }`}
             >
               {link.name}
             </a>
@@ -49,7 +73,11 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="text-gray-700 hover:text-blue-600 transition"
+              className={`transition ${
+                active === link.href.substring(1)
+                  ? "text-blue-600 font-semibold"
+                  : "text-gray-700 hover:text-blue-600"
+              }`}
             >
               {link.name}
             </a>
