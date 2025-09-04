@@ -1,4 +1,3 @@
-import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -7,6 +6,15 @@ import Contact from "./components/Contact";
 import ITBlog from "./components/ITBlog";
 
 function App() {
-  return <div className="min-h-screen bg-gray-50 text-gray-900"></div>;
+  return (
+    <div className="font-sans">
+      <Navbar />
+      <Hero />
+      <Projects />
+      <ITBlog />
+      <About />
+      <Contact />
+    </div>
+  );
 }
 export default App;
