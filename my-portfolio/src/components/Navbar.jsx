@@ -8,7 +8,7 @@ export default function Navbar() {
     { name: "Home", href: "#hero" },
     { name: "Projects", href: "#projects" },
     { name: "IT Blog", href: "#itblog" },
-    { name: "About", href: "#about" },
+    { name: "Profile", href: "#profile" },
     { name: "Contact", href: "#contact" },
   ];
 
