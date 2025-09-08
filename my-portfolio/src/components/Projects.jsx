@@ -1,12 +1,90 @@
+import { useState, useRef } from "react";
+import { projects } from "../data/projects";
+
 export default function Projects() {
+  const [showAll, setShowAll] = useState(false);
+  const sectionRef = useRef(null);
+
+  // Only show first 4 unless expanded
+  const visibleProjects = showAll ? projects : projects.slice(0, 4);
+
+  const handleToggle = () => {
+    if (showAll) {
+      // Smooth scroll back to top of section
+      sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+    setShowAll(!showAll);
+  };
+
   return (
-    <section
-      id="projects"
-      className="min-h-[70vh]
- p-8 bg-white scroll-mt-20"
-    >
-      <h2 className="text-3xl font-semibold mb-4">Projects</h2>
-      <p>Here's where my dev work will be showcased.</p>
+    <section id="projects" ref={sectionRef} className="py-16 bg-white">
+      <div className="container mx-auto px-6">
+        <h2 className="text-3xl font-bold mb-8 text-center">Projects</h2>
+
+        {/* Project Grid */}
+        <div
+          className={`grid md:grid-cols-2 gap-12 transition-all duration-500 ease-in-out ${
+            showAll ? "max-h-[2000px]" : "max-h-[1000px] overflow-hidden"
+          }`}
+        >
+          {visibleProjects.map((project, index) => (
+            <div
+              key={index}
+              className="bg-gray-50 rounded-xl shadow-md overflow-hidden transform hover:scale-[1.02] transition"
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                <p className="text-gray-700 mb-4">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tech.map((t, i) => (
+                    <span
+                      key={i}
+                      className="text-sm bg-gray-200 px-2 py-1 rounded"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex space-x-4">
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline"
+                  >
+                    Live Demo
+                  </a>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-800 hover:underline"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Toggle Button */}
+        {projects.length > 4 && (
+          <div className="text-center mt-10">
+            <button
+              onClick={handleToggle}
+              className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+            >
+              {showAll ? "Show Less" : "Show More"}
+            </button>
+          </div>
+        )}
+      </div>
     </section>
   );
 }

@@ -1,39 +1,41 @@
 export default function Hero() {
   return (
-    <section
-      id="home"
-      className="relative min-h-[70vh]
- flex flex-col justify-center items-center text-center bg-gradient-to-br from-blue-50 via-white to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-black px-4 overflow-hidden"
-    >
-      <div className="absolute -top-40 -left-40 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
-      <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+    <section id="hero" className="h-[80dvh] flex items-center bg-gray-50 px-6">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between max-w-6xl">
+        {/* Left block */}
+        <div className="flex-1 max-w-2xl space-y-6 text-center md:text-left ml-auto">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+            HI, I’M ALEX <br />
+            <span className="text-blue-600">
+              I BUILD APPS <br />
+            </span>
+            &<span className="text-green-600"> FIX SYSTEMS</span>.
+          </h1>
 
-      <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 relative z-10">
-        Hi, I’m{" "}
-        <span className="text-blue-600 dark:text-blue-400">Your Name</span>
-      </h1>
-      <p className="text-lg md:text-2xl text-gray-700 dark:text-gray-300 mb-8 max-w-xl relative z-10">
-        Frontend Developer 💻 | IT Troubleshooter 🛠️ | Passion for sleek, usable
-        interfaces
-      </p>
+          <div className="flex justify-center md:justify-start space-x-4">
+            <a
+              href="#projects"
+              className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
+            >
+              View My Work
+            </a>
+            <a
+              href="#contact"
+              className="px-6 py-3 bg-gray-200 text-gray-800 rounded-lg shadow hover:bg-gray-300 transition"
+            >
+              Contact Me
+            </a>
+          </div>
+        </div>
 
-      <div className="flex flex-col sm:flex-row gap-4 relative z-10">
-        <a
-          href="#projects"
-          className="px-8 py-4 bg-blue-600 text-white rounded-full shadow-lg hover:shadow-2xl hover:bg-blue-700 transition font-medium"
-        >
-          View My Work
-        </a>
-        <a
-          href="#contact"
-          className="px-8 py-4 bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-full shadow-lg hover:bg-gray-300 dark:hover:bg-gray-700 transition font-medium"
-        >
-          Contact Me
-        </a>
-      </div>
-
-      <div className="absolute bottom-10 animate-bounce text-gray-400 z-10">
-        <a href="#projects">↓</a>
+        {/* Right block */}
+        <div className="flex-1 flex justify-center md:pl-[10%]">
+          <img
+            src="https://via.placeholder.com/400"
+            alt="Hero visual"
+            className="w-72 md:w-96 object-contain"
+          />
+        </div>
       </div>
     </section>
   );
