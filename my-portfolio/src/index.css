@@ -1,9 +1,13 @@
 @import "tailwindcss";
 
-html {
-  scroll-behavior: smooth;
+@theme {
+  --color-brand-yellow: #f2c94c;
+  --color-brand-blue: #2f80ed;
+  --color-brand-beige: #f5f5dc;
+  --color-brand-orange: #f2994a;
+  --color-brand-alert: #eb5757;
 }
 
-body {
-  @apply bg-gray-100 text-gray-900;
+html {
+  scroll-behavior: smooth;
 }
