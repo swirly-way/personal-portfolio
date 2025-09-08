@@ -1,8 +1,9 @@
+import heroImage from "../assets/heroImage.svg";
+
 export default function Hero() {
   return (
     <section id="hero" className="h-[80dvh] flex items-center bg-gray-50 px-6">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between max-w-6xl">
-        {/* Left block */}
         <div className="flex-1 max-w-2xl space-y-6 text-center md:text-left ml-auto">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
             HI, I’M ALEX <br />
@@ -28,10 +29,9 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right block */}
         <div className="flex-1 flex justify-center md:pl-[10%]">
           <img
-            src="https://via.placeholder.com/400"
+            src={heroImage}
             alt="Hero visual"
             className="w-72 md:w-96 object-contain"
           />
