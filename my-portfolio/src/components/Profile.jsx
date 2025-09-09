@@ -7,18 +7,18 @@ export default function Profile() {
     <section id="profile" className=" bg-[#003049] py-16 px-6">
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">About Me</h2>
-          <p className="text-gray-600 leading-relaxed mb-4">
+          <h2 className="text-3xl font-bold text-brand-beige mb-4">About Me</h2>
+          <p className="text-white leading-relaxed mb-4">
             I’m a career switcher with a background outside tech, now focused on
             web development and IT support. I enjoy solving problems, learning
-            quickly, and building clean, functional projects.
-          </p>
-          <p className="text-gray-600 leading-relaxed">
+            quickly, and building clean, functional projects. <br />
+            <br />
             In short: I build things and I fix things.
           </p>
+          <p className="text-gray-600 leading-relaxed"></p>
         </div>
 
-        <div className="bg-gray-100 p-6 rounded-xl shadow-md">
+        <div className="bg-brand-beige p-6 rounded-xl shadow-md">
           <h3 className="text-xl font-semibold text-gray-800 mb-4">
             Get in Touch
           </h3>

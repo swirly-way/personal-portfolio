@@ -2,17 +2,15 @@ import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [active, setActive] = useState("home"); // track active section
+  const [active, setActive] = useState("home");
 
   const links = [
     { name: "Home", href: "#hero" },
+    { name: "About Me", href: "#profile" },
     { name: "Projects", href: "#projects" },
     { name: "IT Blog", href: "#itblog" },
-    { name: "Profile", href: "#profile" },
-    { name: "Contact", href: "#contact" },
   ];
 
-  // Observe sections on scroll
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
 
@@ -24,7 +22,7 @@ export default function Navbar() {
           }
         });
       },
-      { threshold: 0.6 } // section must be 60% visible to count
+      { threshold: 0.6 }
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -34,12 +32,10 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
       <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
-        {/* Logo */}
         <a href="#home" className="text-xl font-bold text-blue-600">
           MyPortfolio
         </a>
 
-        {/* Desktop Links */}
         <div className="hidden md:flex space-x-6">
           {links.map((link) => (
             <a
@@ -56,7 +52,6 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden p-2 rounded hover:bg-gray-100"
           onClick={() => setIsOpen(!isOpen)}
@@ -65,7 +60,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Links */}
       {isOpen && (
         <div className="md:hidden flex flex-col items-center space-y-4 pb-4">
           {links.map((link) => (

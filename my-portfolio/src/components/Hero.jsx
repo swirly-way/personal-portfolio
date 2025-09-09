@@ -23,13 +23,13 @@ export default function Hero() {
               href="#projects"
               className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
             >
-              View My Work
+              My Dev Work
             </a>
             <a
               href="#contact"
               className="px-6 py-3 bg-gray-200 text-gray-800 rounded-lg shadow hover:bg-gray-300 transition"
             >
-              Contact Me
+              My IT Work
             </a>
           </div>
         </div>
