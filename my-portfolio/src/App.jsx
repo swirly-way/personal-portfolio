@@ -4,12 +4,16 @@ import Profile from "./components/Profile";
 import Projects from "./components/Projects";
 import ITBlog from "./components/ITBlog";
 import Footer from "./components/Footer";
+import Fade from "./components/Fade";
 
 function App() {
   return (
-    <div className="font-sans">
+    <div className="font-sans relative">
       <Navbar />
+
       <Hero />
+      <Fade from="var(--color-brand-yellow)" to="#003049" className="-mt-12" />
+
       <Profile />
       <Projects />
       <ITBlog />
@@ -17,4 +21,5 @@ function App() {
     </div>
   );
 }
+
 export default App;

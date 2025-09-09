@@ -5,23 +5,20 @@ export default function Projects() {
   const [showAll, setShowAll] = useState(false);
   const sectionRef = useRef(null);
 
-  // Only show first 4 unless expanded
   const visibleProjects = showAll ? projects : projects.slice(0, 4);
 
   const handleToggle = () => {
     if (showAll) {
-      // Smooth scroll back to top of section
       sectionRef.current?.scrollIntoView({ behavior: "smooth" });
     }
     setShowAll(!showAll);
   };
 
   return (
-    <section id="projects" ref={sectionRef} className="py-16 bg-white">
+    <section id="projects" ref={sectionRef} className="py-16 bg-brand-blue-2">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold mb-8 text-center">Projects</h2>
 
-        {/* Project Grid */}
         <div
           className={`grid md:grid-cols-2 gap-12 transition-all duration-500 ease-in-out ${
             showAll ? "max-h-[2000px]" : "max-h-[1000px] overflow-hidden"
@@ -73,7 +70,6 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* Toggle Button */}
         {projects.length > 4 && (
           <div className="text-center mt-10">
             <button
