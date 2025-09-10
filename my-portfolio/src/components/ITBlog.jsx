@@ -5,7 +5,7 @@ export default function ITBlog() {
   const [selected, setSelected] = useState(null);
 
   return (
-    <section id="itblog" className="py-16 bg-brand-beige">
+    <section id="itblog" className="py-16 bg-brand-blue">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold mb-8 text-center">IT Blog</h2>
 

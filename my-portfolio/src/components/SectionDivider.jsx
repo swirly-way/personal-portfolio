@@ -1,4 +1,4 @@
-export default function SectionDivider({ label }) {
+export default function SectionDivider({ label, className = "" }) {
   return (
     <div className="relative w-full bg-brand-beige">
       <svg
@@ -9,7 +9,7 @@ export default function SectionDivider({ label }) {
         {/*It needs some fixing for mobile devices as resolution creates a strip tracing where divider and previous section meet.*/}
         <polygon
           points="0,-1000 100,-1000 60,100 40,100"
-          className="fill-brand-blue"
+          className={className}
         />
       </svg>
 
