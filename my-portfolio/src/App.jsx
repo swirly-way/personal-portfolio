@@ -16,8 +16,19 @@ function App() {
       <Fade from="var(--color-brand-yellow)" to="#003049" className="-mt-12" />
 
       <Profile />
-      <SectionDivider label="Projects" className="fill-brand-blue" />
+      <SectionDivider
+        label="Projects"
+        className="fill-brand-blue"
+        bgClass="bg-brand-beige"
+        textColor="text-white"
+      />
       <Projects />
+      <SectionDivider
+        label="IT Blog"
+        className="fill-brand-beige"
+        bgClass="bg-brand-blue"
+        textColor="text-black"
+      />
       <ITBlog />
       <Footer />
     </div>

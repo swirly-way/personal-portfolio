@@ -1,6 +1,11 @@
-export default function SectionDivider({ label, className = "" }) {
+export default function SectionDivider({
+  label,
+  className = "",
+  bgClass,
+  textColor,
+}) {
   return (
-    <div className="relative w-full bg-brand-beige">
+    <div className={`relative w-full ${bgClass}`}>
       <svg
         className="absolute top-0 left-0 w-full h-12"
         viewBox="0 0 100 100"
@@ -13,7 +18,9 @@ export default function SectionDivider({ label, className = "" }) {
         />
       </svg>
 
-      <div className="relative z-10 flex items-center justify-center h-12 text-white text-2xl font-semibold">
+      <div
+        className={`relative z-10 flex items-center justify-center h-12 ${textColor} text-2xl font-semibold`}
+      >
         {label}
       </div>
     </div>
