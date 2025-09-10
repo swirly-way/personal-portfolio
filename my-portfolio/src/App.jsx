@@ -5,6 +5,7 @@ import Projects from "./components/Projects";
 import ITBlog from "./components/ITBlog";
 import Footer from "./components/Footer";
 import Fade from "./components/Fade";
+import SectionDivider from "./components/SectionDivider";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Fade from="var(--color-brand-yellow)" to="#003049" className="-mt-12" />
 
       <Profile />
+      <SectionDivider label="Projects" />
       <Projects />
       <ITBlog />
       <Footer />

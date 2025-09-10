@@ -15,10 +15,8 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" ref={sectionRef} className="py-16 bg-brand-blue-2">
+    <section id="projects" ref={sectionRef} className="py-16 bg-brand-beige">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-8 text-center">Projects</h2>
-
         <div
           className={`grid md:grid-cols-2 gap-12 transition-all duration-500 ease-in-out ${
             showAll ? "max-h-[2000px]" : "max-h-[1000px] overflow-hidden"

@@ -4,7 +4,7 @@ import Mail from "lucide-react/dist/esm/icons/mail";
 
 export default function Profile() {
   return (
-    <section id="profile" className=" bg-[#003049] py-16 px-6">
+    <section id="profile" className=" bg-brand-blue py-16 px-6">
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div>
           <h2 className="text-3xl font-bold text-brand-beige mb-4">About Me</h2>
