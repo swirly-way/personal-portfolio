@@ -13,7 +13,6 @@ function App() {
       <Navbar />
 
       <Hero />
-      <Fade from="var(--color-brand-yellow)" to="#003049" className="-mt-12" />
 
       <Profile />
       <SectionDivider
