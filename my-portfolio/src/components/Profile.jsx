@@ -1,11 +1,19 @@
 import Github from "lucide-react/dist/esm/icons/github";
 import Linkedin from "lucide-react/dist/esm/icons/linkedin";
 import Mail from "lucide-react/dist/esm/icons/mail";
+import backgroundOverlay from "../assets/about-background.png";
 
 export default function Profile() {
   return (
-    <section id="profile" className=" bg-brand-blue py-16 px-6">
-      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <section id="profile" className="relative bg-brand-blue py-16 px-6">
+      <div
+        className="absolute inset-0 bg-cover bg-center z-0 pointer-events-none"
+        style={{ backgroundImage: `url(${backgroundOverlay})` }}
+      />
+
+      <div className="absolute inset-0 bg-brand-blue/96 z-0 pointer-events-none" />
+
+      <div className="relative z-10 max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div>
           <h2 className="text-3xl font-bold text-brand-beige mb-4">About Me</h2>
           <p className="text-white leading-relaxed mb-4">
@@ -15,7 +23,6 @@ export default function Profile() {
             <br />
             In short: I build things and I fix things.
           </p>
-          <p className="text-gray-600 leading-relaxed"></p>
         </div>
 
         <div className="bg-brand-beige p-6 rounded-xl shadow-md">
