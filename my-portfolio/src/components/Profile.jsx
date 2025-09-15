@@ -11,7 +11,7 @@ export default function Profile() {
         style={{ backgroundImage: `url(${backgroundOverlay})` }}
       />
 
-      <div className="absolute inset-0 bg-brand-blue/96 z-0 pointer-events-none" />
+      <div className="absolute inset-0 bg-brand-blue/92 z-0 pointer-events-none" />
 
       <div className="relative z-10 max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div>

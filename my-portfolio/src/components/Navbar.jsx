@@ -30,9 +30,9 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <nav className="fixed top-0 left-0 w-full bg-brand-blue shadow-md z-50">
       <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
-        <a href="#home" className="text-xl font-bold text-blue-600">
+        <a href="#home" className="text-xl font-bold text-brand-beige">
           MyPortfolio
         </a>
 
@@ -43,8 +43,8 @@ export default function Navbar() {
               href={link.href}
               className={`transition ${
                 active === link.href.substring(1)
-                  ? "text-blue-600 font-semibold"
-                  : "text-gray-700 hover:text-blue-600"
+                  ? "text-brand-beige font-semibold"
+                  : "text-brand-blue-2 hover:text-brand-yellow"
               }`}
             >
               {link.name}
@@ -53,7 +53,7 @@ export default function Navbar() {
         </div>
 
         <button
-          className="md:hidden p-2 rounded hover:bg-gray-100"
+          className="md:hidden p-2 rounded hover:bg-brand-beige"
           onClick={() => setIsOpen(!isOpen)}
         >
           ☰

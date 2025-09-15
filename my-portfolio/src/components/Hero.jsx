@@ -14,14 +14,14 @@ export default function Hero() {
         className="
     absolute inset-0 
     bg-cover bg-center
-    opacity-5 z-0 pointer-events-none
+    opacity-8 z-0 pointer-events-none
   "
         style={{
           backgroundImage: `url(${backgroundOverlay})`,
           backgroundPosition: "center 60%",
         }}
       />
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-brand-yellow to-transparent pointer-events-none z-10" />
+      <div className="absolute bottom-0 left-0 w-full h-50 bg-gradient-to-t from-brand-blue to-transparent pointer-events-none z-10" />
 
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between max-w-6xl space-y-8 md:space-y-0 relative z-10">
         <div className="flex-1 max-w-xl space-y-6 text-center md:text-left mx-auto md:mx-0 md:pl-8">
