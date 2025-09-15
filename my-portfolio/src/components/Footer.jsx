@@ -23,6 +23,15 @@ export default function Footer() {
         >
           Email
         </a>
+        • Background image by{" "}
+        <a
+          href="https://pngtree.com/freepng/perspective-grid-line-background-net_13347654.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-gray-600"
+        >
+          pngtree.com
+        </a>
       </p>
     </footer>
   );
