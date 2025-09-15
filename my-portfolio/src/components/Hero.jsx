@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative h-[80dvh] flex items-center bg-brand-yellow px-6"
+      className="relative h-[100dvh] flex items-center bg-brand-yellow px-6"
     >
       <div
         className="
@@ -21,7 +21,7 @@ export default function Hero() {
           backgroundPosition: "center 60%",
         }}
       />
-      <div className="absolute bottom-0 left-0 w-full h-50 bg-gradient-to-t from-brand-blue to-transparent pointer-events-none z-10" />
+      <div className="absolute bottom-0 left-0 w-full h-100 bg-gradient-to-t from-brand-blue to-transparent pointer-events-none z-10" />
 
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between max-w-6xl space-y-8 md:space-y-0 relative z-10">
         <div className="flex-1 max-w-xl space-y-6 text-center md:text-left mx-auto md:mx-0 md:pl-8">

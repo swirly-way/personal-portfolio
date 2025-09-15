@@ -1,5 +1,7 @@
 import { useState, useRef } from "react";
 import { projects } from "../data/projects";
+import sideBarProject from "../assets/projects/side-project.png";
+import cornerCard from "../assets/projects/corner-card.png";
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -15,8 +17,18 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" ref={sectionRef} className="py-16 bg-brand-beige">
-      <div className="container mx-auto px-6">
+    <section
+      id="projects"
+      ref={sectionRef}
+      className="relative py-16 bg-brand-beige"
+    >
+      <img
+        src={sideBarProject}
+        alt=""
+        className="absolute top-0 -left-8 w-auto h-100 object-contain pointer-events-none z-0"
+      />
+
+      <div className="container mx-auto px-6 relative z-10">
         <div
           className={`grid md:grid-cols-2 gap-12 transition-all duration-500 ease-in-out ${
             showAll ? "max-h-[2000px]" : "max-h-[1000px] overflow-hidden"
@@ -25,7 +37,7 @@ export default function Projects() {
           {visibleProjects.map((project, index) => (
             <div
               key={index}
-              className="bg-gray-50 rounded-xl shadow-md overflow-hidden transform hover:scale-[1.02] transition"
+              className="bg-gray-50 border-6 border-brand-blue rounded-r-4xl shadow-md overflow-hidden transform hover:scale-[1.02] transition"
             >
               <img
                 src={project.image}

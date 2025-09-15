@@ -5,13 +5,16 @@ import backgroundOverlay from "../assets/about-background.png";
 
 export default function Profile() {
   return (
-    <section id="profile" className="relative bg-brand-blue py-16 px-6">
+    <section id="profile" className="relative bg-brand-blue py-24 px-6">
+      <div className="absolute bottom-0 left-0 w-full h-50 bg-gradient-to-t from-brand-blue to-transparent pointer-events-none z-10" />
+
       <div
         className="absolute inset-0 bg-cover bg-center z-0 pointer-events-none"
         style={{ backgroundImage: `url(${backgroundOverlay})` }}
       />
 
-      <div className="absolute inset-0 bg-brand-blue/92 z-0 pointer-events-none" />
+      {/*Container dimming the opacity of background image */}
+      <div className="absolute inset-0 bg-brand-blue/97 z-0 pointer-events-none" />
 
       <div className="relative z-10 max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div>

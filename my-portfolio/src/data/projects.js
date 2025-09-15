@@ -1,3 +1,5 @@
+import testImage from "../assets/test1.png";
+
 export const projects = [
   {
     title: "Weather App",
@@ -6,7 +8,7 @@ export const projects = [
     tech: ["React", "TailwindCSS", "API"],
     demo: "#",
     github: "#",
-    image: "https://via.placeholder.com/400x300",
+    image: testImage,
   },
   {
     title: "Portfolio Website",
@@ -15,7 +17,7 @@ export const projects = [
     tech: ["React", "TailwindCSS"],
     demo: "#",
     github: "#",
-    image: "https://via.placeholder.com/400x300",
+    image: testImage,
   },
   {
     title: "Task Manager",
@@ -23,7 +25,7 @@ export const projects = [
     tech: ["React", "Node.js", "MongoDB"],
     demo: "#",
     github: "#",
-    image: "https://via.placeholder.com/400x300",
+    image: testImage,
   },
   {
     title: "Dev Toolbox",
@@ -32,7 +34,7 @@ export const projects = [
     tech: ["React"],
     demo: "#",
     github: "#",
-    image: "https://via.placeholder.com/400x300",
+    image: testImage,
   },
   {
     title: "Dev Toolbox",
@@ -41,6 +43,6 @@ export const projects = [
     tech: ["React"],
     demo: "#",
     github: "#",
-    image: "https://via.placeholder.com/400x300",
+    image: testImage,
   },
 ];
