@@ -4,7 +4,6 @@ import Profile from "./components/Profile";
 import Projects from "./components/Projects";
 import ITBlog from "./components/ITBlog";
 import Footer from "./components/Footer";
-import Fade from "./components/Fade";
 import SectionDivider from "./components/SectionDivider";
 
 function App() {

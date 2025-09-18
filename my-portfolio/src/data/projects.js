@@ -1,14 +1,15 @@
 import testImage from "../assets/test1.png";
+import rockPaperScissors from "../assets/projects/cards/rock-paper-scissors.png";
 
 export const projects = [
   {
-    title: "Weather App",
+    title: "Rock, Paper, Scissors",
     description:
-      "A React app that fetches live weather data using a public API.",
-    tech: ["React", "TailwindCSS", "API"],
-    demo: "#",
-    github: "#",
-    image: testImage,
+      "A fully vanilla JavaScript game ran in browser with DOM manipulation.",
+    tech: ["JavaScript", "CSS", "DOM"],
+    demo: "https://swirly-way.github.io/rock-paper-scissors/",
+    github: "https://github.com/swirly-way/rock-paper-scissors",
+    image: rockPaperScissors,
   },
   {
     title: "Portfolio Website",
