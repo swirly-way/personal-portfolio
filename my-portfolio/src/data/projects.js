@@ -1,24 +1,26 @@
 import testImage from "../assets/test1.png";
-import rockPaperScissors from "../assets/projects/cards/rock-paper-scissors.png";
+import rockPaperScissors from "../assets/projects/cards/rps.png";
+import cyberBlog from "../assets/projects/cards/blog-project.png";
 
 export const projects = [
   {
     title: "Rock, Paper, Scissors",
     description:
-      "A fully vanilla JavaScript game ran in browser with DOM manipulation.",
+      "A browser-based Rock-Paper-Scissors game built with vanilla JavaScript, featuring DOM manipulation, real-time score tracking, and interactive gameplay.",
     tech: ["JavaScript", "CSS", "DOM"],
     demo: "https://swirly-way.github.io/rock-paper-scissors/",
     github: "https://github.com/swirly-way/rock-paper-scissors",
     image: rockPaperScissors,
   },
   {
-    title: "Portfolio Website",
+    title: "Cybersecurity Blog",
+    subtitle: "Individual project – School of Code Cybersecurity Challenge.",
     description:
-      "A personal portfolio showcasing projects, skills, and blog posts.",
-    tech: ["React", "TailwindCSS"],
-    demo: "#",
-    github: "#",
-    image: testImage,
+      "A single-page TypeScript + Vite blog summarizing key cybersecurity concepts for developers. Clean, responsive UI with Chakra UI and React Icons. It features organized content on basic security practices (authentication, encryption, common vulnerabilities).",
+    tech: ["TypeScript", "React", "Chakra UI", "Vercel for Deployment"],
+    demo: "https://cybersecurity-blog-concept.vercel.app/",
+    github: "https://github.com/swirly-way/cybersecurity-blog-concept",
+    image: cyberBlog,
   },
   {
     title: "Task Manager",

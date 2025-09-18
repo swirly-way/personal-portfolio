@@ -46,6 +46,9 @@ export default function Projects() {
               />
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                <h4 className="text-l font-semibold mb-2">
+                  {project.subtitle}
+                </h4>
                 <p className="text-gray-700 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((t, i) => (
